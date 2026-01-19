@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Gestão de Visitas Comerciais</title>
+    <title>Controle de Visitas Comerciais</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -590,7 +590,7 @@
     <header>
         <div class="container">
             <h1><i class="fas fa-briefcase"></i> Controle de Visitas Comerciais</h1>
-            <p>Gerencie suas visitas a prospects com recursos completos de CRUD e relatórios</p>
+            <p>Gerencie suas visitas com recursos completos, relatórios e exportação de dados</p>
         </div>
     </header>
     
@@ -618,33 +618,90 @@
                     <div class="input-group">
                         <label for="cidade"><i class="fas fa-city"></i> Cidade</label>
                         <select id="cidade" required>
-                            <option value="" selected disabled>Selecione uma cidade</option>
-                            <option value="ALVORADA">ALVORADA</option>
+                            <option value="" selected disabled>Selecione uma cidade</option>                            
+							<option value="AGUDO">AGUDO</option>
+							<option value="ALEGRETE">ALEGRETE</option>
+							<option value="ALVORADA">ALVORADA</option>
+							<option value="ARROIO DO MEIO">ARROIO DO MEIO</option>
+							<option value="BAGÉ">BAGÉ</option>
 							<option value="BENTO GONÇALVES">BENTO GONÇALVES</option>
+							<option value="BOM RETIRO DO SUL">BOM RETIRO DO SUL</option>
+							<option value="CACHOEIRA DO SUL">CACHOEIRA DO SUL</option>
 							<option value="CACHOEIRINHA">CACHOEIRINHA</option>
+							<option value="CAMAQUÃ">CAMAQUÃ</option>
+							<option value="CAMPO BOM">CAMPO BOM</option>
+							<option value="CANDELÁRIA">CANDELÁRIA</option>
+							<option value="CANDIOTA">CANDIOTA</option>
+							<option value="CANELA">CANELA</option>
 							<option value="CANOAS">CANOAS</option>
+							<option value="CAPÃO DA CANOA">CAPÃO DA CANOA</option>
+							<option value="CARAZINHO">CARAZINHO</option>
+							<option value="CARLOS BARBOSA">CARLOS BARBOSA</option>
 							<option value="CAXIAS DO SUL">CAXIAS DO SUL</option>
+							<option value="CHARQUEADAS">CHARQUEADAS</option>
+							<option value="CRUZ ALTA">CRUZ ALTA</option>
+							<option value="DOM PEDRITO">DOM PEDRITO</option>
+							<option value="ELDORADO DO SUL">ELDORADO DO SUL</option>
+							<option value="ENCANTADO">ENCANTADO</option>
 							<option value="ERECHIM">ERECHIM</option>
+							<option value="ESTÂNCIA VELHA">ESTÂNCIA VELHA</option>
 							<option value="ESTEIO">ESTEIO</option>
+							<option value="ESTRELA">ESTRELA</option>
 							<option value="FARROUPILHA">FARROUPILHA</option>
+							<option value="FLORES DA CUNHA">FLORES DA CUNHA</option>
+							<option value="FREDERICO WESTPHALEN">FREDERICO WESTPHALEN</option>
+							<option value="GARIBALDI">GARIBALDI</option>
+							<option value="GIRUÁ">GIRUÁ</option>
+							<option value="GRAMADO">GRAMADO</option>
 							<option value="GRAVATAÍ">GRAVATAÍ</option>
 							<option value="GUAÍBA">GUAÍBA</option>
+							<option value="HORIZONTINA">HORIZONTINA</option>
+							<option value="IGREJINHA">IGREJINHA</option>
 							<option value="IJUÍ">IJUÍ</option>
+							<option value="IMBÉ">IMBÉ</option>
+							<option value="ITAQUI">ITAQUI</option>
+							<option value="IVOTI">IVOTI</option>
+							<option value="LAGOA VERMELHA">LAGOA VERMELHA</option>
 							<option value="LAJEADO">LAJEADO</option>
+							<option value="MARAU">MARAU</option>
 							<option value="MONTENEGRO">MONTENEGRO</option>
+							<option value="NÃO-ME-TOQUE">NÃO-ME-TOQUE</option>
+							<option value="NOVA PETRÓPOLIS">NOVA PETRÓPOLIS</option>
+							<option value="NOVA PRATA">NOVA PRATA</option>
+							<option value="NOVA SANTA RITA">NOVA SANTA RITA</option>
 							<option value="NOVO HAMBURGO">NOVO HAMBURGO</option>
+							<option value="OSÓRIO">OSÓRIO</option>
+							<option value="PALMEIRA DAS MISSÕES">PALMEIRA DAS MISSÕES</option>
+							<option value="PANAMBI">PANAMBI</option>
+							<option value="PAROBÉ">PAROBÉ</option>
 							<option value="PASSO FUNDO">PASSO FUNDO</option>
 							<option value="PELOTAS">PELOTAS</option>
+							<option value="PORTÃO">PORTÃO</option>
 							<option value="PORTO ALEGRE">PORTO ALEGRE</option>
 							<option value="RIO GRANDE">RIO GRANDE</option>
 							<option value="SANTA CRUZ DO SUL">SANTA CRUZ DO SUL</option>
 							<option value="SANTA MARIA">SANTA MARIA</option>
+							<option value="SANTA ROSA">SANTA ROSA</option>
+							<option value="SANTA VITÓRIA DO PALMAR">SANTA VITÓRIA DO PALMAR</option>
+							<option value="SANT'ANA DO LIVRAMENTO">SANT'ANA DO LIVRAMENTO</option>
+							<option value="SANTIAGO">SANTIAGO</option>
+							<option value="SANTO ÂNGELO">SANTO ÂNGELO</option>
+							<option value="SANTO ANTÔNIO DA PATRULHA">SANTO ANTÔNIO DA PATRULHA</option>
+							<option value="SÃO BORJA">SÃO BORJA</option>
+							<option value="SÃO GABRIEL">SÃO GABRIEL</option>
 							<option value="SÃO LEOPOLDO">SÃO LEOPOLDO</option>
+							<option value="SÃO LUIZ GONZAGA">SÃO LUIZ GONZAGA</option>
+							<option value="SÃO SEBASTIÃO DO CAÍ">SÃO SEBASTIÃO DO CAÍ</option>
 							<option value="SAPIRANGA">SAPIRANGA</option>
 							<option value="SAPUCAIA DO SUL">SAPUCAIA DO SUL</option>
+							<option value="TEUTÔNIA">TEUTÔNIA</option>
+							<option value="TORRES">TORRES</option>
+							<option value="TRAMANDAÍ">TRAMANDAÍ</option>
+							<option value="TRIUNFO">TRIUNFO</option>
 							<option value="URUGUAIANA">URUGUAIANA</option>
+							<option value="VACARIA">VACARIA</option>
 							<option value="VIAMÃO">VIAMÃO</option>
-							<option value="OUTRA">OUTRA</option>
+							<option value="OUTRA">OUTRA</option>														
                         </select>
                         <div id="outro-cidade-container" class="outro-container">
                             <input type="text" id="outro-cidade" placeholder="Especifique a cidade">
@@ -761,30 +818,87 @@
                     <label for="filtro-cidade"><i class="fas fa-city"></i> Cidade</label>
                     <select id="filtro-cidade">
                         <option value="">Todas as cidades</option>
+						<option value="AGUDO">AGUDO</option>
+						<option value="ALEGRETE">ALEGRETE</option>
 						<option value="ALVORADA">ALVORADA</option>
+						<option value="ARROIO DO MEIO">ARROIO DO MEIO</option>
+						<option value="BAGÉ">BAGÉ</option>
 						<option value="BENTO GONÇALVES">BENTO GONÇALVES</option>
+						<option value="BOM RETIRO DO SUL">BOM RETIRO DO SUL</option>
+						<option value="CACHOEIRA DO SUL">CACHOEIRA DO SUL</option>
 						<option value="CACHOEIRINHA">CACHOEIRINHA</option>
+						<option value="CAMAQUÃ">CAMAQUÃ</option>
+						<option value="CAMPO BOM">CAMPO BOM</option>
+						<option value="CANDELÁRIA">CANDELÁRIA</option>
+						<option value="CANDIOTA">CANDIOTA</option>
+						<option value="CANELA">CANELA</option>
 						<option value="CANOAS">CANOAS</option>
+						<option value="CAPÃO DA CANOA">CAPÃO DA CANOA</option>
+						<option value="CARAZINHO">CARAZINHO</option>
+						<option value="CARLOS BARBOSA">CARLOS BARBOSA</option>
 						<option value="CAXIAS DO SUL">CAXIAS DO SUL</option>
+						<option value="CHARQUEADAS">CHARQUEADAS</option>
+						<option value="CRUZ ALTA">CRUZ ALTA</option>
+						<option value="DOM PEDRITO">DOM PEDRITO</option>
+						<option value="ELDORADO DO SUL">ELDORADO DO SUL</option>
+						<option value="ENCANTADO">ENCANTADO</option>
 						<option value="ERECHIM">ERECHIM</option>
+						<option value="ESTÂNCIA VELHA">ESTÂNCIA VELHA</option>
 						<option value="ESTEIO">ESTEIO</option>
+						<option value="ESTRELA">ESTRELA</option>
 						<option value="FARROUPILHA">FARROUPILHA</option>
+						<option value="FLORES DA CUNHA">FLORES DA CUNHA</option>
+						<option value="FREDERICO WESTPHALEN">FREDERICO WESTPHALEN</option>
+						<option value="GARIBALDI">GARIBALDI</option>
+						<option value="GIRUÁ">GIRUÁ</option>
+						<option value="GRAMADO">GRAMADO</option>
 						<option value="GRAVATAÍ">GRAVATAÍ</option>
 						<option value="GUAÍBA">GUAÍBA</option>
+						<option value="HORIZONTINA">HORIZONTINA</option>
+						<option value="IGREJINHA">IGREJINHA</option>
 						<option value="IJUÍ">IJUÍ</option>
+						<option value="IMBÉ">IMBÉ</option>
+						<option value="ITAQUI">ITAQUI</option>
+						<option value="IVOTI">IVOTI</option>
+						<option value="LAGOA VERMELHA">LAGOA VERMELHA</option>
 						<option value="LAJEADO">LAJEADO</option>
+						<option value="MARAU">MARAU</option>
 						<option value="MONTENEGRO">MONTENEGRO</option>
+						<option value="NÃO-ME-TOQUE">NÃO-ME-TOQUE</option>
+						<option value="NOVA PETRÓPOLIS">NOVA PETRÓPOLIS</option>
+						<option value="NOVA PRATA">NOVA PRATA</option>
+						<option value="NOVA SANTA RITA">NOVA SANTA RITA</option>
 						<option value="NOVO HAMBURGO">NOVO HAMBURGO</option>
+						<option value="OSÓRIO">OSÓRIO</option>
+						<option value="PALMEIRA DAS MISSÕES">PALMEIRA DAS MISSÕES</option>
+						<option value="PANAMBI">PANAMBI</option>
+						<option value="PAROBÉ">PAROBÉ</option>
 						<option value="PASSO FUNDO">PASSO FUNDO</option>
 						<option value="PELOTAS">PELOTAS</option>
+						<option value="PORTÃO">PORTÃO</option>
 						<option value="PORTO ALEGRE">PORTO ALEGRE</option>
 						<option value="RIO GRANDE">RIO GRANDE</option>
 						<option value="SANTA CRUZ DO SUL">SANTA CRUZ DO SUL</option>
 						<option value="SANTA MARIA">SANTA MARIA</option>
+						<option value="SANTA ROSA">SANTA ROSA</option>
+						<option value="SANTA VITÓRIA DO PALMAR">SANTA VITÓRIA DO PALMAR</option>
+						<option value="SANT'ANA DO LIVRAMENTO">SANT'ANA DO LIVRAMENTO</option>
+						<option value="SANTIAGO">SANTIAGO</option>
+						<option value="SANTO ÂNGELO">SANTO ÂNGELO</option>
+						<option value="SANTO ANTÔNIO DA PATRULHA">SANTO ANTÔNIO DA PATRULHA</option>
+						<option value="SÃO BORJA">SÃO BORJA</option>
+						<option value="SÃO GABRIEL">SÃO GABRIEL</option>
 						<option value="SÃO LEOPOLDO">SÃO LEOPOLDO</option>
+						<option value="SÃO LUIZ GONZAGA">SÃO LUIZ GONZAGA</option>
+						<option value="SÃO SEBASTIÃO DO CAÍ">SÃO SEBASTIÃO DO CAÍ</option>
 						<option value="SAPIRANGA">SAPIRANGA</option>
 						<option value="SAPUCAIA DO SUL">SAPUCAIA DO SUL</option>
+						<option value="TEUTÔNIA">TEUTÔNIA</option>
+						<option value="TORRES">TORRES</option>
+						<option value="TRAMANDAÍ">TRAMANDAÍ</option>
+						<option value="TRIUNFO">TRIUNFO</option>
 						<option value="URUGUAIANA">URUGUAIANA</option>
+						<option value="VACARIA">VACARIA</option>
 						<option value="VIAMÃO">VIAMÃO</option>
 						<option value="OUTRA">OUTRA</option>
                     </select>
@@ -853,30 +967,87 @@
                         <label for="export-cidade"><i class="fas fa-city"></i> Cidade</label>
                         <select id="export-cidade">
                             <option value="">Todas as cidades</option>
-                            <option value="ALVORADA">ALVORADA</option>
+                            <option value="AGUDO">AGUDO</option>
+							<option value="ALEGRETE">ALEGRETE</option>
+							<option value="ALVORADA">ALVORADA</option>
+							<option value="ARROIO DO MEIO">ARROIO DO MEIO</option>
+							<option value="BAGÉ">BAGÉ</option>
 							<option value="BENTO GONÇALVES">BENTO GONÇALVES</option>
+							<option value="BOM RETIRO DO SUL">BOM RETIRO DO SUL</option>
+							<option value="CACHOEIRA DO SUL">CACHOEIRA DO SUL</option>
 							<option value="CACHOEIRINHA">CACHOEIRINHA</option>
+							<option value="CAMAQUÃ">CAMAQUÃ</option>
+							<option value="CAMPO BOM">CAMPO BOM</option>
+							<option value="CANDELÁRIA">CANDELÁRIA</option>
+							<option value="CANDIOTA">CANDIOTA</option>
+							<option value="CANELA">CANELA</option>
 							<option value="CANOAS">CANOAS</option>
+							<option value="CAPÃO DA CANOA">CAPÃO DA CANOA</option>
+							<option value="CARAZINHO">CARAZINHO</option>
+							<option value="CARLOS BARBOSA">CARLOS BARBOSA</option>
 							<option value="CAXIAS DO SUL">CAXIAS DO SUL</option>
+							<option value="CHARQUEADAS">CHARQUEADAS</option>
+							<option value="CRUZ ALTA">CRUZ ALTA</option>
+							<option value="DOM PEDRITO">DOM PEDRITO</option>
+							<option value="ELDORADO DO SUL">ELDORADO DO SUL</option>
+							<option value="ENCANTADO">ENCANTADO</option>
 							<option value="ERECHIM">ERECHIM</option>
+							<option value="ESTÂNCIA VELHA">ESTÂNCIA VELHA</option>
 							<option value="ESTEIO">ESTEIO</option>
+							<option value="ESTRELA">ESTRELA</option>
 							<option value="FARROUPILHA">FARROUPILHA</option>
+							<option value="FLORES DA CUNHA">FLORES DA CUNHA</option>
+							<option value="FREDERICO WESTPHALEN">FREDERICO WESTPHALEN</option>
+							<option value="GARIBALDI">GARIBALDI</option>
+							<option value="GIRUÁ">GIRUÁ</option>
+							<option value="GRAMADO">GRAMADO</option>
 							<option value="GRAVATAÍ">GRAVATAÍ</option>
 							<option value="GUAÍBA">GUAÍBA</option>
+							<option value="HORIZONTINA">HORIZONTINA</option>
+							<option value="IGREJINHA">IGREJINHA</option>
 							<option value="IJUÍ">IJUÍ</option>
+							<option value="IMBÉ">IMBÉ</option>
+							<option value="ITAQUI">ITAQUI</option>
+							<option value="IVOTI">IVOTI</option>
+							<option value="LAGOA VERMELHA">LAGOA VERMELHA</option>
 							<option value="LAJEADO">LAJEADO</option>
+							<option value="MARAU">MARAU</option>
 							<option value="MONTENEGRO">MONTENEGRO</option>
+							<option value="NÃO-ME-TOQUE">NÃO-ME-TOQUE</option>
+							<option value="NOVA PETRÓPOLIS">NOVA PETRÓPOLIS</option>
+							<option value="NOVA PRATA">NOVA PRATA</option>
+							<option value="NOVA SANTA RITA">NOVA SANTA RITA</option>
 							<option value="NOVO HAMBURGO">NOVO HAMBURGO</option>
+							<option value="OSÓRIO">OSÓRIO</option>
+							<option value="PALMEIRA DAS MISSÕES">PALMEIRA DAS MISSÕES</option>
+							<option value="PANAMBI">PANAMBI</option>
+							<option value="PAROBÉ">PAROBÉ</option>
 							<option value="PASSO FUNDO">PASSO FUNDO</option>
 							<option value="PELOTAS">PELOTAS</option>
+							<option value="PORTÃO">PORTÃO</option>
 							<option value="PORTO ALEGRE">PORTO ALEGRE</option>
 							<option value="RIO GRANDE">RIO GRANDE</option>
 							<option value="SANTA CRUZ DO SUL">SANTA CRUZ DO SUL</option>
 							<option value="SANTA MARIA">SANTA MARIA</option>
+							<option value="SANTA ROSA">SANTA ROSA</option>
+							<option value="SANTA VITÓRIA DO PALMAR">SANTA VITÓRIA DO PALMAR</option>
+							<option value="SANT'ANA DO LIVRAMENTO">SANT'ANA DO LIVRAMENTO</option>
+							<option value="SANTIAGO">SANTIAGO</option>
+							<option value="SANTO ÂNGELO">SANTO ÂNGELO</option>
+							<option value="SANTO ANTÔNIO DA PATRULHA">SANTO ANTÔNIO DA PATRULHA</option>
+							<option value="SÃO BORJA">SÃO BORJA</option>
+							<option value="SÃO GABRIEL">SÃO GABRIEL</option>
 							<option value="SÃO LEOPOLDO">SÃO LEOPOLDO</option>
+							<option value="SÃO LUIZ GONZAGA">SÃO LUIZ GONZAGA</option>
+							<option value="SÃO SEBASTIÃO DO CAÍ">SÃO SEBASTIÃO DO CAÍ</option>
 							<option value="SAPIRANGA">SAPIRANGA</option>
 							<option value="SAPUCAIA DO SUL">SAPUCAIA DO SUL</option>
+							<option value="TEUTÔNIA">TEUTÔNIA</option>
+							<option value="TORRES">TORRES</option>
+							<option value="TRAMANDAÍ">TRAMANDAÍ</option>
+							<option value="TRIUNFO">TRIUNFO</option>
 							<option value="URUGUAIANA">URUGUAIANA</option>
+							<option value="VACARIA">VACARIA</option>
 							<option value="VIAMÃO">VIAMÃO</option>
 							<option value="OUTRA">OUTRA</option>
                         </select>
@@ -923,8 +1094,8 @@
     
     <footer>
         <div class="container">
-            <p>Sistema de Gestão de Visitas Comerciais &copy; <span id="current-year">2024</span></p>
-            <p>Dados armazenados localmente no seu dispositivo | CRUD Completo + Exportação</p>
+            <p>Controle de Visitas Comerciais &copy; <span id="current-year">2024</span></p>
+            <p>Dados armazenados localmente no seu dispositivo</p>
         </div>
     </footer>
 
