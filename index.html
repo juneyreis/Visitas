@@ -244,6 +244,20 @@
             box-shadow: 0 5px 15px rgba(52, 73, 94, 0.3);
         }
         
+        /* NOVO BOTÃO: Exportar JSON - Cor cinza */
+        .btn-export-json { 
+            background-color: #7f8c8d; /* Cinza */
+            color: white;
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .btn-export-json:hover {
+            background-color: #6c7a7d;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(127, 140, 141, 0.3);
+        }
+        
         .btn-small {
             padding: 8px 15px;
             font-size: 0.9rem;
@@ -708,6 +722,10 @@
                     </button>
                     <button type="button" class="btn-import" onclick="document.getElementById('file-input-import').click()">
                         <i class="fas fa-file-import"></i> Importar Dados (JSON)
+                    </button>
+                    <!-- NOVO BOTÃO: Exportar Dados (JSON) -->
+                    <button type="button" class="btn-export-json" onclick="exportarDadosJSON()">
+                        <i class="fas fa-file-export"></i> Exportar Dados (JSON)
                     </button>
                     <button type="button" class="btn-secondary" onclick="listar()">
                         <i class="fas fa-list"></i> Listar Visitas
@@ -1467,6 +1485,78 @@
                 showNotification("Erro ao excluir a visita", false);
                 fecharModal('modal-exclusao');
                 visitaParaExcluir = null;
+            };
+        }
+        
+        // ============================================
+        // NOVA FUNÇÃO: Exportar Dados para JSON
+        // ============================================
+        
+        function exportarDadosJSON() {
+            if (!db) {
+                showNotification("Erro: Banco de dados não inicializado", false);
+                return;
+            }
+            
+            const tx = db.transaction("visitas", "readonly");
+            const store = tx.objectStore("visitas");
+            const getAllRequest = store.getAll();
+            
+            getAllRequest.onsuccess = function() {
+                const todasVisitas = getAllRequest.result;
+                
+                if (todasVisitas.length === 0) {
+                    showNotification("Não há dados para exportar. Adicione visitas primeiro.", false);
+                    return;
+                }
+                
+                // Aplicar filtros atuais aos dados para exportação
+                const dadosParaExportar = aplicarFiltrosArray(todasVisitas);
+                
+                if (dadosParaExportar.length === 0) {
+                    showNotification("Nenhum dado corresponde aos filtros aplicados. Tente ajustar os filtros.", false);
+                    return;
+                }
+                
+                // Preparar dados para exportação
+                const dadosFormatados = dadosParaExportar.map(visita => {
+                    // Criar cópia do objeto sem modificar o original
+                    const visitaExportada = { ...visita };
+                    
+                    // Garantir que o campo observações existe
+                    if (visitaExportada.observacoes === undefined) {
+                        visitaExportada.observacoes = '';
+                    }
+                    
+                    return visitaExportada;
+                });
+                
+                // Criar objeto JSON formatado
+                const dadosJSON = JSON.stringify(dadosFormatados, null, 2);
+                
+                // Criar blob e link para download
+                const blob = new Blob([dadosJSON], { type: 'application/json' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                
+                // Gerar nome do arquivo com data atual
+                const dataAtual = new Date().toISOString().split('T')[0];
+                const horaAtual = new Date().toTimeString().split(' ')[0].replace(/:/g, '-');
+                const nomeArquivo = `visitas-${dataAtual}_${horaAtual}.json`;
+                
+                a.href = url;
+                a.download = nomeArquivo;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+                
+                // Mostrar notificação de sucesso
+                showNotification(`${dadosParaExportar.length} visitas exportadas com sucesso para ${nomeArquivo}`, true);
+            };
+            
+            getAllRequest.onerror = function() {
+                showNotification("Erro ao acessar os dados para exportação", false);
             };
         }
         
